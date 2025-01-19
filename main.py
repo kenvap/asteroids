@@ -17,11 +17,10 @@ def main():
     pygame.display.set_caption("Asteroids Game")
 
     # main loop
-    running = True
-    while running:  # noqa: F405
+    while True:  # noqa: F405
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False
+                return 
 
         # Fill the screen with a color (RGB)
         screen.fill((0, 0, 0))
@@ -29,8 +28,5 @@ def main():
         # Update the display
         pygame.display.flip()
     
-    #Quit pygame
-    pygame.display.flip()
-
 if __name__ == "__main__":
     main()
